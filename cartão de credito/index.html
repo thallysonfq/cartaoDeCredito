@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARD</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="index.js" type="module" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="cards">
+        <div class="front">
+          <img src="./images/bg-card-front.png" id="card1" />
+
+          <div class="conteiner">
+            <img src="./images/favicon-32x32.png" id="logo" />
+            <span id="CardNumber">0000 0000 0000 0000</span>
+            <span id="CardName"> joão Inácio da Silva</span>
+            <span id="Date">
+              <span id="CardMonth">00 </span>
+              /
+              <span id="CardYear">00</span>
+            </span>
+          </div>
+        </div>
+        <div class="back">
+          <img src="./images/bg-card-back.png" id="card2" />
+          <div class="conteiner">
+            <span id="cod">123</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="transiton" data-information="loading">
+        <label for="name">CARDHOLDER NAME</label>
+        <input type="text" id="name" placeholder=" ex: joão Inácio da Silva" />
+        <span id="erroName"></span>
+        <label for="number">CARD NUMBER</label>
+        <input
+          type="text"
+          id="number"
+          placeholder=" ex: 0000 0000 0000 0000"
+          maxlength="16"
+        />
+        <span id="erroNumber"></span>
+        <div class="information">
+          <div class="dates">
+            <label for="date">EXP. DATE (MM/YY)</label>
+            <input
+              type="text"
+              name="month"
+              id="month"
+              placeholder="MM"
+              maxlength="2"
+            />
+
+            <input
+              type="text"
+              name="year"
+              id="year"
+              placeholder="YY"
+              maxlength="2"
+            />
+          </div>
+          <div class="code">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" placeholder="ex: 123" maxlength="3" />
+          </div>
+        </div>
+        <span id="error"> </span>
+        <button id="confirm">Confirm</button>
+      </section>
+    </main>
+  </body>
+</html>

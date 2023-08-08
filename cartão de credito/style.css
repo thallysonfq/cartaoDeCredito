@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap");
+
+:root {
+  --black: black;
+  --white: white;
+  --confirm: #fa3812;
+  --error: #e31227;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/bg-main-desktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: relatve;
+  font-family: "Montserrat", "Roboto";
+  font-weight: bolder;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
+}
+.cards {
+  min-width: 25%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.front {
+  display: flex;
+}
+#card1 {
+  position: relative;
+}
+.conteiner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+#logo {
+  margin: 1em 0 0 1em;
+  width: 3em;
+  height: 3em;
+}
+#CardNumber {
+  margin-top: 2em;
+  margin-left: 0.5em;
+  letter-spacing: 0.1em;
+  word-spacing: 5px;
+  font-size: 1.8em;
+}
+#CardName {
+  margin-top: 2em;
+  margin-left: 1em;
+  letter-spacing: 0.1em;
+  word-spacing: 5px;
+  font-size: 1em;
+}
+#Date {
+  margin-left: 23em;
+}
+.back {
+  display: flex;
+  margin-left: 50%;
+}
+#card2 {
+  position: relative;
+}
+
+#cod {
+  margin-top: 7em;
+  margin-left: 23em;
+}
+section {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  font-size: 0.6em;
+  margin-bottom: 10px;
+}
+section input {
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.information {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.dates input {
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.code {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.code input {
+  width: 150px;
+}
+#confirm {
+  width: 22.5em;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#confirm:hover {
+  transform: scale(1.1);
+  background-color: var(--confirm);
+}
+#imgComplete {
+  width: 10em;
+  height: 9em;
+}
+
+@media (max-width: 970px) {
+  body {
+    min-width: 100%;
+    background-image: url(./images/bg-main-mobile.png);
+    background-size: contain;
+    background-position: relative;
+    margin-top: 25%;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 12em;
+  }
+
+  .cards {
+    max-width: 30%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back {
+    position: relative;
+    z-index: 1;
+    margin-left: 20%;
+  }
+  .front {
+    position: absolute;
+    z-index: 2;
+    margin-top: 21em;
+  }
+}
